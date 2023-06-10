@@ -5,37 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de la Moneda</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="script.js"></script>
-    
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <h1>Cara o Cruz</h1>
-    <section class="container">
-        <div class="cara" id="cara">
-            <img src="./resours/cara.png" id="cara">
-        </div> 
-        <div class="cruz" id="cruz">
-            <img src="./resours/cruz.png" id="cruz">
-        </div> 
-    </section>
-    <section class="button">
-        <div>
-            <button>Girar la moneda</button>
+    <main>
+        <div class="counters">
+            <div>
+                <h1>Tails:</h1>
+                <p id="tails-counter">0</p>
+            </div>
+            <div>
+                <h1>Heads:</h1>
+                <p id="heads-counter">0</p>
+            </div>
         </div>
-        <div>
-            <button>Reiniciar el juego</button>
-        </div>
-    </section>
-    <section class="contadores">
-        <div>
-            <button>Contador cara: n veces cara</button> 
-        </div>
-        <div>
-            <button>Contador cruz: n veces cruz</button> 
-        </div>
-    </section>
+        <section>
+            <header id="coin">
+                <figure class="heads">
+                    <img src="./img/cara.png" alt="Heads">
+                </figure>
+                <figure class="tails">
+                    <img src="./img/cruz.png" alt="Tails">
+                </figure>
+            </header>
+            <footer>
+                <button id="flip-btn">Flip the coin</button>
+                <button onclick="resetCounters()">Reset Counters</button>
+            </footer>
+        </section>
+    </main>
 
-    
 </body>
 </html>
